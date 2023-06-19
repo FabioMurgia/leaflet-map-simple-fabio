@@ -26,16 +26,11 @@
   <script>
 
   /* Set up the initial map center and zoom level */
-  var map = L.map('map', {
-    center: [39.95579856000596, -75.16802597924024], // EDIT coordinates to re-center map
-    zoom: 15,  // EDIT from 1 (zoomed out) to 18 (zoomed in)
-    scrollWheelZoom: true
-  });
-
-  /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  L.tileLayer(
-   'https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey={apikey}', {
-     attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+var Thunderforest_Pioneer = L.tileLayer('https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png?apikey={apikey}', {
+	attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+	apikey: '<your apikey>',
+	maxZoom: 22
+});
  }).addTo(map);
 
   /* Display a point marker with pop-up text */
