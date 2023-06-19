@@ -33,9 +33,12 @@
   });
 
   /* display basemap tiles -- see others at https://leaflet-extras.github.io/leaflet-providers/preview/ */
-  L.tileLayer(    'https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-	attribution: '&copy; OpenStreetMap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
+  L.tileLayer(
+   'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+     attribution: '&copy; <a href="https://osm.org/copyright">\
+      OpenStreetMap</a> contributors, &copy;\
+        <a href="https://carto.com/attribution">CARTO</a>'
+ }).addTo(map);
 
   /* Display a point marker with pop-up text */
   L.marker([39.95579856000596, -75.16802597924024]).addTo(map) // EDIT marker coordinates
